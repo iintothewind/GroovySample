@@ -144,7 +144,9 @@ public abstract class CsvMergeSort {
     }
 
     protected void clean() {
-        resolver.getResources("file:/${FileUtils.tempDirectory.canonicalPath}/sort*result.csv").each { it.file.delete() }
+        resolver.getResources("file:/${FileUtils.tempDirectory.canonicalPath}/sort*result.csv").each {
+            it.file.delete()
+        }
         FileUtils.deleteQuietly(result)
     }
 
