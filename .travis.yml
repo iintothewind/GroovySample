@@ -1,0 +1,7 @@
+language: groovy
+jdk:
+  - oraclejdk8
+script:
+- mvn test
+env: MAVEN_OPTS="-XX:MaxPermSize=128m"
+
